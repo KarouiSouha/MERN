@@ -22,7 +22,7 @@ export default class Putting_it_Together extends Component {
       <h1>{firstName},{lastName}</h1>
       <p>age:{age}</p>
       <p>Hair Color:{haircolor}</p>
-      <button onClick={()=>this.increment()}>Birthday</button>
+      <button onClick={()=>this.increment()}>Birthday Button for {firstName}</button>
       </div>
     )
   }

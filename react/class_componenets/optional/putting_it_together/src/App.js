@@ -1,4 +1,5 @@
 import Putting_it_Together from "./components/Putting_it_Together"; 
+import './App.css';
 const data=[{
   firstName:'Doe',
   lastName:'Jane',
@@ -9,16 +10,6 @@ const data=[{
   firstName:'Smith',
   lastName:'john',
   age:88,
-  haircolor:'Brown'
-},
-{  firstName:'Fillmore',
-lastName:'Millard',
-age:50,
-haircolor:'Brown'},
-{
-  firstName:'Smith',
-  lastName:'Maria',
-  age:62,
   haircolor:'Brown'
 }
 ]
