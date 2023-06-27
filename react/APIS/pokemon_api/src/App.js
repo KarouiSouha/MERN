@@ -12,7 +12,6 @@ function App() {
     })
     .then((jsonResponse) =>{
       console.log(jsonResponse.results);
-      // set state here where I have access
       setpokemon(jsonResponse.results)
     })
     .catch((errObj)=>{console.log("❌❌ Got an Error =>", errObj)})    
