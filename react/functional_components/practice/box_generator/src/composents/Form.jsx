@@ -10,9 +10,7 @@ function Form(props) {
         props.setcolor([...props.colors, newcolor])
         setcolor("");
         setfixe("");
-        
     }
-  
   return (
     <div>
         <form  onSubmit={(e)=>{handleForm(e)}}>

@@ -6,7 +6,6 @@ function Tabs({ items }) {
         setcontent(items[index].content);
         console.log(items)
       };
-
   return (
     <div>
         {items.map((item, index) => (
@@ -17,10 +16,8 @@ function Tabs({ items }) {
             {item.label}
           </button>
         ))}
-
       <div>
             <textarea name="item" value={content}></textarea>
-           
       </div>
     </div>
   )

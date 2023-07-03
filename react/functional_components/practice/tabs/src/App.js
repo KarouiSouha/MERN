@@ -1,6 +1,5 @@
 import Tabs from './components/Tabs';
 import './App.css';
-
 function App() {
   const tabs = [
     {

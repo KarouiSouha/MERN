@@ -1,13 +1,10 @@
 import React,{useState} from 'react'
-
 function Hook() {
-    
         const [First_Name, setFirst_Name] = useState("");
         const [Last_Name, setLast_Name] = useState("");
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");  
         const [Confirm_password, setConfirmPassword] = useState(""); 
-
   return (
     <div>
     <form >
@@ -41,9 +38,7 @@ function Hook() {
          </div>
     )
  }
-
 export default Hook
-
 
 
 

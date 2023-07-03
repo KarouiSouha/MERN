@@ -10,7 +10,6 @@ function App() {
       {colors.map((color,idx)=>{
         return <Boxgenerator color={color} key={idx} />
       })}
-
     </div>
   );
 }
