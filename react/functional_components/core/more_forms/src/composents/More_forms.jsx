@@ -41,10 +41,19 @@ function MoreForms() {
     const validatePassword= (e) =>{
         setPassword(e.target.value)
 
-        if(e.target.value.length < 8){
+        if(e.target.value.length < 8 ){
             setError({password:true})
         }else{
            setError({password:false});
+        }
+    }
+    const validateConfirm_Password= (e) =>{
+        setConfirmPassword(e.target.value)
+
+        if(e.target.value.length < 8 ){
+            setError({Confirm_password:true})
+        }else{
+           setError({Confirm_password:false});
         }
     }
   return (
@@ -73,7 +82,8 @@ function MoreForms() {
             </div>
             <div>
                 <label>Confirm_password: </label>
-                <input type="text" onChange={ (e) => setConfirmPassword(e.target.value) } />
+                <input type="text" onChange={ (e) =>validateConfirm_Password(e) } />
+                {error.Confirm_password ?  <p style={{color:"red"}}>Password must match!</p>: ""}
             </div>
             <input type="submit" value="Create User" />
          </form>
