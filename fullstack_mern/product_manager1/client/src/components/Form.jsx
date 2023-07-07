@@ -24,7 +24,9 @@ const Update = (props) => {
     axios.post("http://localhost:8000/api/Products/", updatedShow)
     .then((response)=>{
         console.log(response.data);
-       
+       setTitle("")
+       setPrice(0)
+       setDescription("")
     })
     .catch((err)=>{
         console.log("❌❌❌ Something Went Wrong", err);
