@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App">
     <MyContext.Provider value={[Name,setName]}>
-     <Wrapper>
+     <Wrapper> 
+      <Navbar/>
        <FormWrapper/>
-        <Navbar/>
+       
      </Wrapper>
     </MyContext.Provider>
     </div>
