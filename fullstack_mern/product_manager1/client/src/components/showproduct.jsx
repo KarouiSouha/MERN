@@ -15,9 +15,21 @@ const Show = (props) => {
         .catch((err)=>{
             console.log("❌❌❌ Something Went Wrong", err);
         })
-    },[])
+    },[props.refresh])
 
-
+  // delete function
+  const deleteShow = (id) =>{
+    axios.delete("http://localhost:8000/api/Products/"+id)
+    .then((res)=>{
+        // TODO !!
+        setShows(shows.filter((oneShow)=>{
+            return (oneShow._id !== id)
+        }))
+    })
+    .catch((err)=>{
+        console.log("❌❌❌ Something Went Wrong", err)
+    })
+}
   return (
     <div>
         <h2>Shows List</h2>
@@ -38,7 +50,8 @@ const Show = (props) => {
                             <td>{oneShow.price}</td>
                             <td>{oneShow.description}</td>
                             <td>
-                            <Link to={`products/edit/${oneShow._id}`} >edit </Link>
+                            <Link to={`products/edit/${oneShow._id}`} > edit </Link>
+                            <button onClick={() => deleteShow(oneShow._id)}>delete</button>
                             </td>
                         </tr>
                     )

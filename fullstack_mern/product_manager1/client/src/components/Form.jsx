@@ -27,12 +27,13 @@ const Update = (props) => {
        setTitle("")
        setPrice(0)
        setDescription("")
+      props.setrefresh(updatedShow)
     })
     .catch((err)=>{
         console.log("❌❌❌ Something Went Wrong", err);
     })
    }    
-
+   
   return (
     <div>
 
